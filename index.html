@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+ <link rel="stylesheet" href="./styles/styles.css" />
+ 
+</head>
+<body>
+    <script src="src/jsonParse.js"></script>
+    <div class="container">
+        <div class="weather-app">
+          <div class="top-conteiner">
+            <div id="city_container">
+                <div class="left-container">
+                    <h1 id="city-name"></h1>
+                    <h2 id="date-hour"></h2>
+                </div>
+                <div class="right-container">
+                    <form id="search-form">
+                        <div class="row">
+                            <div >
+                                <div class="input-group">
+                                    <input type="search"  id="city-input" placeholder="City or location" autocomplete="off">
+                                    <input id="button--submit" value="Search" type="submit">
+                                </div>
+                                
+                            
+                            </div>
+                        </div>
+                    </form>
+                    <button id="location-button">
+                        <img
+                        src="icons/location-light.svg"
+                        alt="location-icon"
+                        id="location-icon"
+                        />
+                    </button>
+                </div>
+            </div>
+               
+          </div>
+          <div class="current-weather-conteiner">
+                <div class="current-weather">
+                <h3 id="temperature">33</h3>
+                <ul>
+                    <li id="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                    </li>
+                    <li id="weather-description">Partly cloudy</li>
+                </ul>
+                </div>
+                <div class="right-container">
+                    <div class="img-current-weather">
+                        <img
+                        src=""
+                        alt="partly-cloudy-icon"
+                        id="weather-icon"
+                        />
+                    </div>
+                    <div class="descript-current-weather">
+                        <ul id="weather-info">
+                        <li>
+                            <img
+                            src="icons/feels-like.png"
+                            alt="feels-like-icon"
+                            class="icon"
+                            />
+                            Feels like: <span id="feels-like">31</span>°C
+                        </li>
+                        <li>
+                            <img
+                            src="icons/humidity.png"
+                            alt="humidity-icon"
+                            class="icon"
+                            />
+                            Humidity: <span id="humidity-level">15</span>%
+                        </li>
+                        <li>
+                            <img src="icons/wind.png" alt="wind-icon" class="icon" />
+                            Wind: <span id="wind-speed">14</span> km/h
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
+      </div>
+      <script src="src/app.js"></script>
+</body>
+</html>
